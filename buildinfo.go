@@ -6,6 +6,11 @@ import (
 
 type Info struct {
 	GoVersion string
+
+	// https://github.com/golang/go/issues/29228
+	// https://github.com/golang/go/issues/50603
+	MainModuleVersion string
+
 	GitCommit string
 }
 
@@ -16,7 +21,8 @@ func Read() (*Info, bool) {
 	}
 
 	info := &Info{
-		GoVersion: buildInfo.GoVersion,
+		GoVersion:         buildInfo.GoVersion,
+		MainModuleVersion: buildInfo.Main.Version,
 	}
 
 	for _, kv := range buildInfo.Settings {
