@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v0.0.5 (2025-12-18)
+
+### Others
+
+- chore(changelog): generate v0.0.3 (2022-06-01)
+
+### Build
+
+- build: bump go.mod (2025-12-18)
+
 ## v0.0.3 (2022-06-01)
 
 ### Added
